@@ -4,4 +4,3 @@ python-multipart
 appwrite
 apscheduler
 pydantic-settings
-gradio
