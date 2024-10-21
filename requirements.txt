@@ -1,4 +1,7 @@
-appwrite==4.0.0
-APScheduler==3.10.4
-fastapi==0.115.2
-pydantic_settings==2.6.0
+fastapi
+uvicorn
+python-multipart
+appwrite
+apscheduler
+pydantic-settings
+gradio
