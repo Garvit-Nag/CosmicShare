@@ -1,0 +1,7 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript", "plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/explicit-function-return-type": "error"
+  }
+}
