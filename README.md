@@ -1,7 +1,7 @@
 # CosmicShare 🌌
 
 A modern, secure file sharing platform with a cosmic-themed UI and auto-expiring links. Share files at light speed through an intuitive interface with a space-inspired design.
-ou can view the live version of the website here: [CosmicShare](https://cosmic-share.vercel.app/)
+You can view the live version of the website here: [CosmicShare](https://cosmic-share.vercel.app/)
 ## ✨ Features
 
 - **Secure File Sharing**: Upload and share files with automatically expiring links.
