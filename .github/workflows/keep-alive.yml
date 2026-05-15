@@ -1,0 +1,25 @@
+name: Keep Services Alive
+
+on:
+  schedule:
+    - cron: '0 9 */3 * *'  # Every 3 days at 9:00 AM UTC
+  workflow_dispatch:        # Allow manual trigger from GitHub UI
+
+jobs:
+  ping-appwrite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Appwrite
+        run: |
+          echo "Pinging Appwrite..."
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X GET \
+            -H "X-Appwrite-Project: 67166856001083a6a6d2" \
+            "https://cloud.appwrite.io/v1/health")
+          echo "Appwrite status: $STATUS"
+          if [ "$STATUS" -ge 200 ] && [ "$STATUS" -lt 500 ]; then
+            echo "Appwrite is alive."
+          else
+            echo "Warning: unexpected status $STATUS"
+            exit 1
+          fi
